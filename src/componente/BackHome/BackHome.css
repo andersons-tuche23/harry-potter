@@ -1,0 +1,66 @@
+.image-topo img {
+    display: flex;
+    width: 100%;
+    height: 29px;
+}
+
+.backhome {
+    display: flex;
+    flex-direction: column;
+    background-image: url(/public/backhome.png);
+    background-size: contain ;
+    background-repeat: no-repeat;
+    /* height: 100%; */
+    /* width: 100vw;  */
+    max-width: 100%;
+    background-color:#041b29 ;
+}
+
+.logo-home img {
+    margin-left: 290px;
+    margin-top: 210px;
+}
+
+.botao button {
+    width: 210px;
+    height: 59px;
+    margin-top: 53px;
+    color: #000000;
+    background-color: #A6955A;
+    margin-left: 342px;
+    border-radius: 10px;
+    border: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.simbolo {
+    display: flex;
+    margin-left: 200px;
+    align-items: center;
+    margin-top: 260px;
+}
+
+.texto-navegue {
+    color: #A6955A;
+    font-size: 24px;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.imagem-linha img {
+    width: 804px;
+    height: 3px;
+    margin-left: 30px;
+}
+
+.image-cards {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-top: 60px;
+    padding: 0 150px;
+}
