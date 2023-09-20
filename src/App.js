@@ -1,12 +1,11 @@
-import BackHome from "./componente/BackHome";
-
-
+// import BackHome from "./componente/BackHome";
+import AppRouters from "./Routers";
 
 
 function App() {
   return (
     <div className="App">
-      <BackHome />
+      <AppRouters />
     </div>
   );
 }

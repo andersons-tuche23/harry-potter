@@ -1,5 +1,7 @@
 import React from 'react';
 import './BackHome.css'
+import { Link } from 'react-router-dom';
+
 
 
 function BackHome() {
@@ -13,11 +15,13 @@ function BackHome() {
                     <img src='/logo.png' alt='image_logo' />
                 </div>
                 <div className='botao'>
-                    <button>veja todos<br />os personagens</button>
+                    <Link to='/personagens'>
+                        <button className='botao-hover'>veja todos<br />os personagens</button>
+                    </Link>
                 </div>
 
                 <section className='simbolo'>
-                    <div  className='imagem-simbolo'>
+                    <div className='imagem-simbolo'>
                         <img src='/simbolo.png' alt='image_simbolo' />
                     </div>
                     <div className='texto-navegue'>
@@ -30,16 +34,16 @@ function BackHome() {
 
                 <section className='image-cards'>
                     <div>
-                        <img src='/grifinoria.png' alt='image_grifinoria'/>
+                        <img src='/grifinoria.png' alt='image_grifinoria' />
                     </div>
                     <div>
-                        <img src='sonserina.png' alt='image_sonserina'/>
+                        <img src='sonserina.png' alt='image_sonserina' />
                     </div>
                     <div>
-                        <img src='lufa-lufa.png' alt='image_lufa'/>
+                        <img src='lufa-lufa.png' alt='image_lufa' />
                     </div>
                     <div>
-                        <img src='corvinal.png' alt='image_cornival'/>
+                        <img src='corvinal.png' alt='image_cornival' />
                     </div>
                 </section>
             </div>

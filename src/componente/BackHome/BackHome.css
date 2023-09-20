@@ -1,7 +1,7 @@
 .image-topo img {
     display: flex;
     width: 100%;
-    height: 29px;
+    height: 103px;
 }
 
 .backhome {
@@ -10,8 +10,7 @@
     background-image: url(/public/backhome.png);
     background-size: contain ;
     background-repeat: no-repeat;
-    /* height: 100%; */
-    /* width: 100vw;  */
+    height: 1300px;
     max-width: 100%;
     background-color:#041b29 ;
 }
@@ -34,6 +33,12 @@
     font-weight: 700;
     font-size: 18px;
     cursor: pointer;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.botao-hover:hover{
+    background-color: #fff;
 }
 
 .simbolo {
@@ -60,7 +65,14 @@
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    cursor: pointer;
     margin-top: 60px;
-    padding: 0 150px;
+    padding: 0 165px;
+    margin-left: 20px;
 }
+
+.image-cards img{
+    cursor: pointer;
+}
+
+
+
