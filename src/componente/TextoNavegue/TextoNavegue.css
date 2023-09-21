@@ -1,0 +1,19 @@
+.simbolo {
+    display: flex;
+    margin-left: 200px;
+    align-items: center;
+    margin-top: 260px;
+}
+
+.texto-navegue {
+    color: #A6955A;
+    font-size: 24px;
+    margin-left: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.imagem-linha img {
+    width: 804px;
+    height: 3px;
+    margin-left: 30px;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import './BackHome.css'
 import { Link } from 'react-router-dom';
+import TextoNavegue from '../TextoNavegue';
 
 
 
-function BackHome() {
+function BackHome(props) {
     return (
         <>
             <div className='image-topo'>
@@ -19,19 +20,10 @@ function BackHome() {
                         <button className='botao-hover'>veja todos<br />os personagens</button>
                     </Link>
                 </div>
-
-                <section className='simbolo'>
-                    <div className='imagem-simbolo'>
-                        <img src='/simbolo.png' alt='image_simbolo' />
-                    </div>
-                    <div className='texto-navegue'>
-                        <p>Navegue pelas Casas</p>
-                    </div>
-                    <div className='imagem-linha'>
-                        <img src='/topo.png' alt='image_linha' />
-                    </div>
-                </section>
-
+                <div>
+                    <TextoNavegue texto='Navegue Pelas Casas' />
+                </div>
+               
                 <section className='image-cards'>
                     <div>
                         <img src='/grifinoria.png' alt='image_grifinoria' />
