@@ -1,0 +1,30 @@
+.personagens-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.personagem {
+    text-align: center;
+    margin: 10px;
+}
+
+.personagem img {
+    width: 163px;
+    height: 227px;
+    cursor: pointer;
+    border: 2px solid#A6955A;
+    margin-top: 28px;
+}
+
+.nome-pesonagem {
+    color: #A6955A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.nome-da-casa{
+    color: #A6955A;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}

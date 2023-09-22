@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import './PersonagensList.css'
 
 function PersonagensList() {
   const [personagens, setPersonagens] = useState([]);
+ 
   
   useEffect(() => {
     fetch('https://hp-api.onrender.com/api/characters')
@@ -15,17 +17,25 @@ function PersonagensList() {
       });
   }, []); 
 
+  
+
+    
+
   return (
+   <>
+   
     <div>
-      <h1>Personagens</h1>
-      <ul>
+      <div className="personagens-container">
         {personagens.map(personagem => (
-          <li key={personagem.id}>
-            {personagem.name} - {personagem.house}
-          </li>
+          <div key={personagem.id} className="personagem">
+            <img src={personagem.image ? personagem.image : "/sem.imagem.png" }  alt={personagem.name} />
+            <p className='nome-pesonagem'>{personagem.name}</p>
+            <p className='nome-da-casa'>{personagem.house}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
+    </>
   );
 }
 

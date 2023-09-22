@@ -46,7 +46,7 @@
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    margin-top: 60px;
+    margin-top: 260px;
     padding: 0 165px;
     margin-left: 20px;
 }
@@ -54,6 +54,16 @@
 .image-cards img{
     cursor: pointer;
 }
+
+.image-cards > div {
+   
+    transition: transform 0.3s ease; 
+    cursor: pointer;
+  }
+  
+  .image-cards > div:hover {
+    transform: scale(1.05); 
+  }
 
 
 
