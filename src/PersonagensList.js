@@ -1,25 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import './PersonagensList.css'
+import { useLocation } from 'react-router-dom';
+import queryString from 'query-string';
+
+
 
 function PersonagensList() {
+
+  const location = useLocation();
+  const queryParams = queryString.parse(location.search);
+  const casa = queryParams.casa;
+
   const [personagens, setPersonagens] = useState([]);
+ 
  
   
   useEffect(() => {
-    fetch('https://hp-api.onrender.com/api/characters')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        setPersonagens(data); 
-      })
-      .catch(error => {
-        console.error('Erro ao buscar personagens:', error);
-      });
-  }, []); 
-
-  
-
     
+    if (casa) {
+      
+      fetch(`https://hp-api.onrender.com/api/characters/house/${casa}`)
+        .then((response) => response.json())
+        .then((data) => {
+          setPersonagens(data);
+        })
+        .catch((error) => {
+          console.error('Erro ao buscar personagens:', error);
+        });
+    } else {
+      
+      fetch('https://hp-api.onrender.com/api/characters')
+        .then((response) => response.json())
+        .then((data) => {
+          setPersonagens(data);
+        })
+        .catch((error) => {
+          console.error('Erro ao buscar personagens:', error);
+        });
+    }
+  }, [casa]);
+
 
   return (
    <>
@@ -36,6 +56,7 @@ function PersonagensList() {
       </div>
     </div>
     </>
+    
   );
 }
 

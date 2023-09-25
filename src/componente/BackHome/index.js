@@ -2,10 +2,19 @@ import React from 'react';
 import './BackHome.css'
 import { Link } from 'react-router-dom';
 import TextoNavegue from '../TextoNavegue';
+import queryString from 'query-string';
 
 
+
+const adicionarQuery = (casa) => {
+    const query = queryString.stringify({ casa: casa });
+    return `/personagens?${query}`;
+};
 
 function BackHome(props) {
+
+
+
     return (
         <>
             <div className='image-topo'>
@@ -23,19 +32,27 @@ function BackHome(props) {
                 <div>
                     <TextoNavegue texto='Navegue Pelas Casas' />
                 </div>
-               
+
                 <section className='image-cards'>
                     <div>
-                        <img src='/grifinoria.png' alt='image_grifinoria' />
+                        <Link to={adicionarQuery('gryffindor')}>
+                            <img src='/grifinoria.png' alt='image_grifinoria' />
+                        </Link>
                     </div>
                     <div>
-                        <img src='sonserina.png' alt='image_sonserina' />
+                        <Link to={adicionarQuery('slytherin')}>
+                            <img src='sonserina.png' alt='image_sonserina' />
+                        </Link>
                     </div>
                     <div>
-                        <img src='lufa-lufa.png' alt='image_lufa' />
+                        <Link to={adicionarQuery('hufflepuff')}>
+                            <img src='lufa-lufa.png' alt='image_lufa' />
+                        </Link>
                     </div>
                     <div>
+                    <Link to={adicionarQuery('ravenclaw')}>
                         <img src='corvinal.png' alt='image_cornival' />
+                        </Link>
                     </div>
                 </section>
             </div>
