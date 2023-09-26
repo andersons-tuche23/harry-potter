@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './PersonagensList.css'
 import { useLocation } from 'react-router-dom';
 import queryString from 'query-string';
-
+import Modal from './componente/Modal';
 
 
 function PersonagensList() {
@@ -13,11 +13,8 @@ function PersonagensList() {
 
   const [personagens, setPersonagens] = useState([]);
 
+  const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
- 
- 
   
   useEffect(() => {
     
@@ -44,23 +41,23 @@ function PersonagensList() {
     }
   }, [casa]);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+
+  const openModal = (character) => {
+    setSelectedCharacter(character);
   };
-  
+
   const closeModal = () => {
-    setIsModalOpen(false);
+    setSelectedCharacter(null);
   };
   
-
-
+  
   return (
    <>
    
     <div>
       <div className="personagens-container">
         {personagens.map(personagem => (
-          <div key={personagem.id} className="personagem">
+          <div key={personagem.id} className="personagem"  onClick={() => openModal(personagem)}>
             <img src={personagem.image ? personagem.image : "/sem.imagem.png" }  alt={personagem.name} />
             <p className='nome-pesonagem'>{personagem.name}</p>
             <p className='nome-da-casa'>{personagem.house}</p>
@@ -69,13 +66,11 @@ function PersonagensList() {
       </div>
     </div>
 
-    {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            {/* Conteúdo do modal */}
-            <button onClick={closeModal}>Fechar</button>
-          </div>
-        </div>
+    {selectedCharacter && (
+        <Modal
+          character={selectedCharacter}
+          onClose={closeModal}
+        />
       )}
     </>
     
