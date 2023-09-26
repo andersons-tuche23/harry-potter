@@ -12,6 +12,10 @@ function PersonagensList() {
   const casa = queryParams.casa;
 
   const [personagens, setPersonagens] = useState([]);
+
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
  
  
   
@@ -40,6 +44,15 @@ function PersonagensList() {
     }
   }, [casa]);
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  
+
 
   return (
    <>
@@ -55,6 +68,15 @@ function PersonagensList() {
         ))}
       </div>
     </div>
+
+    {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            {/* Conteúdo do modal */}
+            <button onClick={closeModal}>Fechar</button>
+          </div>
+        </div>
+      )}
     </>
     
   );

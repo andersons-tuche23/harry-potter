@@ -12,9 +12,8 @@ const adicionarQuery = (casa) => {
 };
 
 function BackHome(props) {
-
-
-
+ 
+    
     return (
         <>
             <div className='image-topo'>

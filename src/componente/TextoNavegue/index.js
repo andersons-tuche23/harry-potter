@@ -8,7 +8,7 @@ function TextoNavegue(props) {
     <div className='imagem-simbolo'>
         <img src='/simbolo.png' alt='image_simbolo' />
     </div>
-    <div className='texto-navegue'>
+    <div className='texto-navegue' >
         <p>{props.texto}</p>
     </div>
     <div className='imagem-linha'>
