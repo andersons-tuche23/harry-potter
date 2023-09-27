@@ -1,54 +1,94 @@
 /* Modal.css */
 
-/* Estilo para o fundo semi-transparente ao redor do modal */
+/* Estilos para o overlay de fundo */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Um fundo semi-transparente */
+  background: rgba(0, 0, 0, 0.5);
+  /* Fundo semi-transparente */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Certifique-se de que o modal esteja na parte superior */
+  z-index: 1000;
+  /* Certifique-se de que o modal está na frente de outros elementos */
 }
 
-/* Estilo para o modal em si */
+/* Estilos para a janela do modal */
 .modal {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 400px; /* Largura do modal, ajuste conforme necessário */
+  background: #171717;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  width: 704px;
+  height: 481px;
+  /* max-width: 400px; Largura máxima do modal */
 }
 
-/* Estilo para o cabeçalho do modal (com o botão Fechar) */
+/* Estilos para o cabeçalho do modal */
 .modal-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row-reverse;
+  /* justify-content: space-between; */
+  /* align-items: center; */
   margin-bottom: 10px;
 }
 
-/* Estilo para o botão Fechar */
+/* Estilos para o botão de fechar */
 .close-button {
-  background-color: #ccc;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #A6955A;
+  border: none;
 }
 
-.close-button:hover {
-  background-color: #999;
-}
-
-/* Estilo para o conteúdo do modal */
+/* Estilos para o conteúdo do modal */
 .modal-content {
-  /* Estilize o conteúdo do modal conforme necessário */
+  /* text-align: center; */
+  margin-top: 34px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Adicione mais estilos conforme necessário */
+/* Estilos para a imagem do personagem */
+.modal-content img {
+  /* max-width: 100%; */
+  /* height: auto; */
+  /* width: 256px; */
+  /* height: 356px; */
+  margin-bottom: 10px;
+}
 
-  
+/* Estilos para o nome do personagem */
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para outras informações do personagem */
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #D9D9D9;
+}
+
+.character-image {
+  border: 2px solid #A6955A;
+  width: 256px;
+  height: 356px;
+}
+
+.container-modal {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+.modal-content span {
+  color: #A6955A;
+}

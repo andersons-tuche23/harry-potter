@@ -1,6 +1,7 @@
 .simbolo {
     display: flex;
-    margin-left: 200px;
+    justify-content: center;
+    /* margin-left: 200px; */
     align-items: center;
     margin-top: 70px;
 }
@@ -13,7 +14,7 @@
 }
 
 .imagem-linha img {
-    width: 804px;
+    width: 1000px;
     height: 3px;
     margin-left: 30px;
 }

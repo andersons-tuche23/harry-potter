@@ -68,8 +68,11 @@ function PersonagensList() {
 
     {selectedCharacter && (
         <Modal
+        isOpen={true}
+        onClose={closeModal}
           character={selectedCharacter}
-          onClose={closeModal}
+          // abilities={selectedCharacter.abilities}
+          // human={selectedCharacter}
         />
       )}
     </>
