@@ -54,13 +54,13 @@ function PersonagensList() {
   return (
    <>
    
-    <div>
+    <div className='meus-personagens'>
       <div className="personagens-container">
         {personagens.map(personagem => (
           <div key={personagem.id} className="personagem"  onClick={() => openModal(personagem)}>
             <img src={personagem.image ? personagem.image : "/sem.imagem.png" }  alt={personagem.name} />
             <p className='nome-pesonagem'>{personagem.name}</p>
-            <p className='nome-da-casa'>{personagem.house}</p>
+            {/* <p className='nome-da-casa'>{personagem.house}</p> */}
           </div>
         ))}
       </div>
@@ -71,8 +71,6 @@ function PersonagensList() {
         isOpen={true}
         onClose={closeModal}
           character={selectedCharacter}
-          // abilities={selectedCharacter.abilities}
-          // human={selectedCharacter}
         />
       )}
     </>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import BackHome from "./componente/BackHome";
 import Personagens from "./componente/Personagens";
 
+
 const AppRouters = () =>{
     return(
         <Router>

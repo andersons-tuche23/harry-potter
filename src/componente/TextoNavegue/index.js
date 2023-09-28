@@ -3,6 +3,10 @@ import './TextoNavegue.css'
 
 
 function TextoNavegue(props) {
+
+  // const cards ="grifinoria"
+  
+
   return (
     <section className='simbolo'>
     <div className='imagem-simbolo'>
@@ -14,6 +18,10 @@ function TextoNavegue(props) {
     <div className='imagem-linha'>
         <img src='/topo.png' alt='image_linha' />
     </div>
+    
+    {/* <div>
+      <TextoNavegue  texto={cards}/>
+    </div> */}
 </section>
   )
 }
