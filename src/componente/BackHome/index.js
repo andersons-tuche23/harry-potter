@@ -11,9 +11,9 @@ const adicionarQuery = (casa) => {
     return `/personagens?${query}`;
 };
 
-function BackHome(props) {
+
+function BackHome() {
  
-   
 
     return (
         <>
@@ -35,7 +35,7 @@ function BackHome(props) {
 
                 <section className='image-cards'>
                     <div>
-                        <Link to={adicionarQuery('gryffindor')}>
+                        <Link to={adicionarQuery('gryffindor' )}>
                             <img src='/grifinoria.png' alt='image_grifinoria' />
                         </Link>
                     </div>
@@ -56,9 +56,7 @@ function BackHome(props) {
                     </div>
                 </section>
             </div>
-
         </>
-
     )
 }
 

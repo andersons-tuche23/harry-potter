@@ -5,9 +5,7 @@ import PersonagensList from '../../PersonagensList';
 
 
 
-
-
-function Personagens(props) {
+function Personagens() {
     
     return (
         <>
@@ -23,7 +21,7 @@ function Personagens(props) {
                     </div>
                 </div>
                 <div>
-                    <PersonagensList/>
+                    <PersonagensList />
                 </div>
             </section>
 
