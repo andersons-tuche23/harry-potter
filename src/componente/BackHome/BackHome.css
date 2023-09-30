@@ -74,15 +74,14 @@
   }
 
   .logo-home img {
-    margin-left: 33px;
-    margin-top: 128px;
+    margin: 128px 0 0 35px;
     width: 295px;
   }
 
   .botao button {
-    width: 90%;
+    width: 70%;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 55px;
   }
 
   .image-cards {
@@ -90,6 +89,7 @@
     align-items: center;
     margin-top: 20px;
     padding: 0 20px;
+    margin-left: 0;
   }
 
   .image-cards>div {
