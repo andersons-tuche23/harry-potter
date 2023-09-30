@@ -4,9 +4,8 @@ import TextoNavegue from '../TextoNavegue';
 import PersonagensList from '../../PersonagensList';
 
 
-
 function Personagens() {
-    
+
     return (
         <>
             <section className='backpersonagens'>

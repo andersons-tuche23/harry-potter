@@ -5,12 +5,12 @@ import BackHome from "./componente/BackHome";
 import Personagens from "./componente/Personagens";
 
 
-const AppRouters = () =>{
-    return(
+const AppRouters = () => {
+    return (
         <Router>
             <Routes>
-                <Route path="/" element={<BackHome/>}></Route>
-                <Route path="/personagens" element={<Personagens/>}></Route>
+                <Route path="/" element={<BackHome />}></Route>
+                <Route path="/personagens" element={<Personagens />}></Route>
             </Routes>
 
         </Router>

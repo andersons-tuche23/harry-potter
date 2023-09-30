@@ -15,11 +15,11 @@ function PersonagensList() {
 
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
-  
+
   useEffect(() => {
-    
+
     if (casa) {
-      
+
       fetch(`https://hp-api.onrender.com/api/characters/house/${casa}`)
         .then((response) => response.json())
         .then((data) => {
@@ -29,7 +29,7 @@ function PersonagensList() {
           console.error('Erro ao buscar personagens:', error);
         });
     } else {
-      
+
       fetch('https://hp-api.onrender.com/api/characters')
         .then((response) => response.json())
         .then((data) => {
@@ -49,32 +49,31 @@ function PersonagensList() {
   const closeModal = () => {
     setSelectedCharacter(null);
   };
-  
-  
-  return (
-   <>
-   
-    <div className='meus-personagens'>
-      <div className="personagens-container">
-        {personagens.map(personagem => (
-          <div key={personagem.id} className="personagem"  onClick={() => openModal(personagem)}>
-            <img src={personagem.image ? personagem.image : "/sem.imagem.png" }  alt={personagem.name} />
-            <p className='nome-pesonagem'>{personagem.name}</p>
-            {/* <p className='nome-da-casa'>{personagem.house}</p> */}
-          </div>
-        ))}
-      </div>
-    </div>
 
-    {selectedCharacter && (
+
+  return (
+    <>
+
+      <div className='meus-personagens'>
+        <div className="personagens-container">
+          {personagens.map(personagem => (
+            <div key={personagem.id} className="personagem" onClick={() => openModal(personagem)}>
+              <img src={personagem.image ? personagem.image : "/sem.imagem.png"} alt={personagem.name} />
+              <p className='nome-pesonagem'>{personagem.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {selectedCharacter && (
         <Modal
-        isOpen={true}
-        onClose={closeModal}
+          isOpen={true}
+          onClose={closeModal}
           character={selectedCharacter}
         />
       )}
     </>
-    
+
   );
 }
 

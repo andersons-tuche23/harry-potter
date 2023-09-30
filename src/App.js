@@ -1,6 +1,4 @@
-// import BackHome from "./componente/BackHome";
 import AppRouters from "./Routers";
-
 
 
 function App() {

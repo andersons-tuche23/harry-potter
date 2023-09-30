@@ -13,7 +13,7 @@ const adicionarQuery = (casa) => {
 
 
 function BackHome() {
- 
+
 
     return (
         <>
@@ -35,7 +35,7 @@ function BackHome() {
 
                 <section className='image-cards'>
                     <div>
-                        <Link to={adicionarQuery('gryffindor' )}>
+                        <Link to={adicionarQuery('gryffindor')}>
                             <img src='/grifinoria.png' alt='image_grifinoria' />
                         </Link>
                     </div>
@@ -50,8 +50,8 @@ function BackHome() {
                         </Link>
                     </div>
                     <div>
-                    <Link to={adicionarQuery('ravenclaw')}>
-                        <img src='corvinal.png' alt='image_cornival' />
+                        <Link to={adicionarQuery('ravenclaw')}>
+                            <img src='corvinal.png' alt='image_cornival' />
                         </Link>
                     </div>
                 </section>
