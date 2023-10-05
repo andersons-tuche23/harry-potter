@@ -50,7 +50,7 @@ function Personagens() {
     setSelectedCharacter(null);
   };
 
-  const houses = () => { // Certifique-se de passar 'casa' como argumento para a função
+  const houses = () => { 
     switch (casa) {      
       case "gryffindor":
         return "Grifinória";
@@ -62,7 +62,7 @@ function Personagens() {
         return "Sonserina";
   
       default:
-        return "PERSONAGENS"; // Adicionado 'return' aqui
+        return "PERSONAGENS"; 
     }
   };
 

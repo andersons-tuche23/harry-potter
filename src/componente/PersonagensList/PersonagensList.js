@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
 import './PersonagensList.css'
-import { useLocation } from 'react-router-dom';
-import queryString from 'query-string';
 import Modal from '../Modal/index'
 
 
