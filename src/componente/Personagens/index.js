@@ -66,8 +66,6 @@ function Personagens() {
     }
   };
 
-  console.log(casa, 'casa');
-
     return (
         <>
             <section className='backpersonagens'>
